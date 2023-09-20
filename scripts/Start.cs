@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Godot;
+using GodotOsu.scripts.Beatmap;
 
 namespace GodotOsu.scripts;
 
@@ -18,14 +19,5 @@ public partial class Start : Node
 
     private void _onStartPressed()
     {
-        try
-        {
-            var reader = File.OpenText(OsuPath);
-            GD.Print(reader.ReadToEnd());
-        }
-        catch (FileNotFoundException e)
-        {
-            GD.PrintErr("文件未找到");
-        }
     }
 }
