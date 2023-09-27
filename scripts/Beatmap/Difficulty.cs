@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace GodotOsu.scripts.Beatmap;
+﻿namespace GodotOsu.scripts.Beatmap;
 
 public enum DifficultyKeys
 {
@@ -38,12 +35,12 @@ public struct Difficulty
 
 public class DifficultyBuilder
 {
-    private double _hpDrainRate = 0.0;
-    private double _circleSize = 0.0;
-    private double _overallDifficulty = 0.0;
-    private double _approachRate = 0.0;
-    private double _sliderMultiplier = 0.0;
-    private double _sliderTickRate = 0.0;
+    private double _hpDrainRate;
+    private double _circleSize;
+    private double _overallDifficulty;
+    private double _approachRate;
+    private double _sliderMultiplier;
+    private double _sliderTickRate;
 
     public double HpDrainRate
     {

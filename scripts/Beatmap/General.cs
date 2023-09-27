@@ -101,21 +101,21 @@ public struct General
 public class GeneralBuilder
 {
     private List<string> _audioFilename = new();
-    private long _audioLeadIn = 0;
+    private long _audioLeadIn;
     private long _previewTime = -1;
     private GeneralCountdown _countdown = GeneralCountdown.None;
     private GeneralSampleSet _sampleSet = GeneralSampleSet.Normal;
     private double _stackLeniency = 0.7;
     private GeneralGameMode _mode = GeneralGameMode.Osu;
-    private bool _letterboxInBreaks = false;
-    private bool _useSkinSprites = false;
+    private bool _letterboxInBreaks;
+    private bool _useSkinSprites;
     private GeneralOverlayPosition _overlayPosition = GeneralOverlayPosition.NoChange;
     private List<string> _skinPreference = new();
-    private bool _epilepsyWarning = false;
-    private int _countdownOffset = 0;
-    private bool _specialStyle = false;
-    private bool _widescreenStoryboard = false;
-    private bool _samplesMatchPlaybackRate = false;
+    private bool _epilepsyWarning;
+    private int _countdownOffset;
+    private bool _specialStyle;
+    private bool _widescreenStoryboard;
+    private bool _samplesMatchPlaybackRate;
 
     public List<string> AudioFilename
     {
@@ -169,7 +169,7 @@ public class GeneralBuilder
 
     public List<string> SkinPreference
     {
-        set => _skinPreference = value ?? throw new ArgumentNullException(nameof(value));
+        set => _skinPreference = value;
     }
 
     public bool EpilepsyWarning

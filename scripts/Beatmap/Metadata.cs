@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace GodotOsu.scripts.Beatmap;
 
@@ -50,16 +49,16 @@ public struct Metadata
 
 public class MetadataBuilder
 {
-    private string? _title = null;
-    private string? _titleUnicode = null;
-    private string? _artist = null;
-    private string? _artistUnicode = null;
-    private string? _creator = null;
-    private string? _version = null;
-    private string? _source = null;
+    private string? _title;
+    private string? _titleUnicode;
+    private string? _artist;
+    private string? _artistUnicode;
+    private string? _creator;
+    private string? _version;
+    private string? _source;
     private List<string> _tags = new();
-    private long _beatmapId = 0;
-    private long _beatmapSetId = 0;
+    private long _beatmapId;
+    private long _beatmapSetId;
 
     public string? Title
     {
